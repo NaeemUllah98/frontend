@@ -6,7 +6,7 @@ const TableOne = () => {
   const [channel,getChannel] = useState<any>([])
   const getChannels = async()=>{
     try{
-      const response = await axios.get("http://localhost:5000/get-channel")
+      const response = await axios.get("https://wild-blue-shrimp-sari.cyclic.app/get-channel")
       getChannel(response?.data?.result)
     }catch(e){
       console.log("e", e);
